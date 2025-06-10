@@ -119,6 +119,10 @@
             "/developer/debug/humility"
         ] },
 
+        { "t": "pkg_install", "with": "dram-margining", "pkgs": [
+            "/driver/developer/amd/zen"
+        ] },
+
         { "t": "pkg_install", "with": "stress", "pkgs": [
             "/ooce/util/stress-ng",
             "/system/test/fio"

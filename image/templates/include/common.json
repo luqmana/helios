@@ -37,13 +37,27 @@
 
         { "t": "ensure_dir", "dir": "/usr/lib/oxide",
             "owner": "root", "group": "sys", "mode": "0755" },
+        { "t": "ensure_dir", "dir": "/lib/svc/manifest/oxide",
+            "owner": "root", "group": "sys", "mode": "0755" },
+
         { "t": "ensure_file", "file": "/usr/lib/oxide/net-setup.sh",
             "src": "net-setup.sh",
             "owner": "root", "group": "bin", "mode": "0755" },
-        { "t": "ensure_dir", "dir": "/lib/svc/manifest/oxide",
-            "owner": "root", "group": "sys", "mode": "0755" },
         { "t": "ensure_file", "file": "/lib/svc/manifest/oxide/net-setup.xml",
             "src": "net-setup.xml",
-            "owner": "root", "group": "sys", "mode": "0644" }
+            "owner": "root", "group": "sys", "mode": "0644" },
+
+        { "t": "ensure_file", "with": "dram-margining",
+            "file": "/usr/lib/oxide/dram-margining-report.sh",
+            "src": "dram-margining-report.sh",
+            "owner": "root", "group": "bin", "mode": "0755" },
+        { "t": "ensure_file", "with": "dram-margining",
+            "file": "/lib/svc/manifest/oxide/dram-margining-report.xml",
+            "src": "dram-margining-report.xml",
+            "owner": "root", "group": "sys", "mode": "0644" },
+        { "t": "ensure_file", "with": "dram-margining",
+            "file": "/usr/bin/dmar-report",
+            "extsrc": "dmar-report/target/release/dmar-report",
+            "owner": "root", "group": "bin", "mode": "0755" }
     ]
 }
